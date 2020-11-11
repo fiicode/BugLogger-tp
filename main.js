@@ -36,9 +36,9 @@ function createMainWindow() {
 	// check for uppdate
 	// autoUpdater.checkForUpdatesAndNotify();
 	// autoUpdater.on('update-downloaded', (e) => {
-		console.log('================')
-		console.log(autoUpdater.quitAndInstall())
-		console.log('================')
+		// console.log('================')
+		// console.log(autoUpdater.quitAndInstall())
+		// console.log('================')
 	// })
 
 	mainWindow = new BrowserWindow({
