@@ -18,10 +18,13 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js --mode development",
     "build": "cross-env NODE_ENV=production webpack --config webpack.build.config.js --mode production",
     "package": "npm run build",
-    "postpackage": "electron-packager ./ --out=./release-builds --overwrite --plateform=darwin --icon=assets/icon.icns"
+    "postpackage": "electron-packager ./ --out=./release-builds --overwrite --plateform=darwin --icon=assets/icon.icns",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "electron-updater": "^4.3.5",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
     "mongoose": "^5.10.12",
@@ -29,7 +32,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
-    "react-moment": "^1.0.0"
+    "react-moment": "^1.0.0",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -40,6 +44,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "electron": "^9.0.0",
+    "electron-builder": "^22.9.1",
     "electron-devtools-installer": "^3.0.0",
     "electron-packager": "^14.2.1",
     "file-loader": "^6.0.0",

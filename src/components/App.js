@@ -46,7 +46,7 @@ const App = () => {
 
 	function addItem (item) {
 		if (item.text === '' || item.user === '' || item.priority === '') {
-			showAlert('All fields required', 'danger', 1000)
+			showAlert('All fields required.', 'danger', 1000)
 			return false
 		}
 		ipcRenderer.send('logs:add', item)

@@ -2,6 +2,7 @@ const path = require('path')
 const url = require('url')
 const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 // const { autoUpdater } = require("electron-updater");
+const { autoUpdater } = require('electron-updater')
 
 const connectDB = require('./config/db')
 const Log = require('./models/Logs')
@@ -34,6 +35,11 @@ function createMainWindow() {
 
 	// check for uppdate
 	// autoUpdater.checkForUpdatesAndNotify();
+	// autoUpdater.on('update-downloaded', (e) => {
+		console.log('================')
+		console.log(autoUpdater.quitAndInstall())
+		console.log('================')
+	// })
 
 	mainWindow = new BrowserWindow({
 		width: isDev ? 1400 : 1100,
