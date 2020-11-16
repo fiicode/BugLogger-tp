@@ -20,8 +20,30 @@
     "package": "npm run build",
     "postpackage": "electron-packager ./ --out=./release-builds --overwrite --plateform=darwin --icon=assets/icon.icns",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiicode/BugLogger-tp.git"
+  },
+  "author": "bahaboubackr",
+  "build": {
+    "appId": "com.applyhead.pingo",
+    "productName": "BugLogger TP",
+    "copyright": "Copyright © 2020 fiistore",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution"
+    },
+    "publish": [
+      "github"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/fiicode/BugLogger-tp/issues"
+  },
+  "homepage": "https://github.com/fiicode/BugLogger-tp/blob/master/README.md",
   "dependencies": {
     "bootstrap": "^4.5.3",
     "electron-updater": "^4.3.5",
