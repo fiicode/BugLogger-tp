@@ -29,7 +29,7 @@
   },
   "author": "bahaboubackr",
   "build": {
-    "appId": "com.applyhead.pingo",
+    "appId": "com.example.app",
     "productName": "BugLogger TP",
     "copyright": "Copyright © 2020 fiistore",
     "mac": {
